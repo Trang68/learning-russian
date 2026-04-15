@@ -2,23 +2,542 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
-  <title>Bài tập tiếng Nga - Trang 1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bài kiểm tra tiếng Nga – Người bán quần áo ở chợ Moscow (A1–A2)</title>
   <style>
-    iframe {
+    :root {
+      --primary: #1a237e;
+      --accent: #c62828;
+      --light: #e8eaf6;
+      --border: #9fa8da;
+      --bg: #fafafa;
+      --answer-bg: #fff9c4;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: #212121;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+    .cover {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px 32px;
+    }
+    .cover h1 { font-size: 1.9em; font-weight: 700; margin-bottom: 8px; }
+    .cover h2 { font-size: 1.15em; font-weight: 400; opacity: .88; margin-bottom: 6px; }
+    .cover .badge {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 20px;
+      padding: 4px 18px;
+      font-size: .9em;
+      margin-top: 12px;
+    }
+    .info-bar {
+      background: var(--light);
+      border-bottom: 2px solid var(--border);
+      padding: 14px 32px;
+      display: flex; gap: 40px; flex-wrap: wrap;
+    }
+    .info-bar span { font-size: .92em; color: #37474f; }
+    .info-bar strong { color: var(--primary); }
+    .container { max-width: 860px; margin: 0 auto; padding: 24px 20px 60px; }
+
+    /* Part header */
+    .part {
+      margin-top: 36px;
+      border-left: 5px solid var(--primary);
+      padding-left: 14px;
+    }
+    .part-title {
+      font-size: 1.22em;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+    .part-sub { font-size: .93em; color: #555; font-style: italic; margin-bottom: 14px; }
+
+    /* Section */
+    .section { margin-top: 22px; }
+    .section-title {
+      font-weight: 700;
+      color: var(--accent);
+      border-bottom: 1px dashed var(--border);
+      padding-bottom: 4px;
+      margin-bottom: 12px;
+    }
+
+    /* Numbered list */
+    ol.qs { padding-left: 22px; }
+    ol.qs li { margin-bottom: 10px; }
+    ol.qs li .vi { font-size: .88em; color: #795548; font-style: italic; }
+
+    /* Fill-in blank */
+    .fill { border-bottom: 2px solid var(--primary); display: inline-block; min-width: 140px; }
+
+    /* Multiple choice */
+    .choices { margin-top: 4px; padding-left: 24px; }
+    .choices li { list-style: none; margin-bottom: 3px; }
+
+    /* Dialogue box */
+    .dialogue {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 10px 0;
+    }
+    .dialogue p { margin-bottom: 6px; }
+    .dialogue .role { font-weight: 700; color: var(--primary); }
+    .dialogue .role2 { font-weight: 700; color: var(--accent); }
+
+    /* Vocab table */
+    table {
       width: 100%;
-      height: 400px;
-      border: none;
-      margin-bottom: 20px;
+      border-collapse: collapse;
+      margin-top: 8px;
+    }
+    th {
+      background: var(--primary);
+      color: #fff;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    td { padding: 7px 12px; border-bottom: 1px solid #e0e0e0; }
+    tr:nth-child(even) td { background: #f3f4fb; }
+
+    /* Answer key */
+    .answer-key {
+      margin-top: 44px;
+      background: var(--answer-bg);
+      border: 2px solid #f9a825;
+      border-radius: 10px;
+      padding: 20px 24px;
+    }
+    .answer-key h2 {
+      color: #e65100;
+      font-size: 1.15em;
+      margin-bottom: 12px;
+      border-bottom: 1px solid #f9a825;
+      padding-bottom: 6px;
+    }
+    .answer-key p { margin-bottom: 6px; }
+    .answer-key strong { color: var(--primary); }
+
+    /* Tips box */
+    .tip-box {
+      background: #e8f5e9;
+      border-left: 4px solid #2e7d32;
+      border-radius: 6px;
+      padding: 12px 16px;
+      margin: 14px 0;
+      font-size: .93em;
+    }
+    .tip-box b { color: #1b5e20; }
+
+    @media print {
+      .cover { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .answer-key { page-break-before: always; }
     }
   </style>
 </head>
 <body>
-  <h1>Bài tập tiếng Nga - Trang 1</h1>
-  
-  <iframe src="https://learningapps.org/watch?app=2962657" allowfullscreen></iframe>
-  
-  <iframe src="https://learningapps.org/watch?app=7896924" allowfullscreen></iframe>
-  
-  <p><a href="index.html">Quay lại Trang chủ</a></p>
+
+<!-- ═══════════ COVER ═══════════ -->
+<div class="cover">
+  <h1>BÀI KIỂM TRA TIẾNG NGA</h1>
+  <h2>Тест по русскому языку</h2>
+  <h2>Dành riêng cho người bán quần áo tại chợ Moscow</h2>
+  <div class="badge">Trình độ A1 – A2 &nbsp;|&nbsp; Xuất khẩu lao động – Nga</div>
+</div>
+
+<div class="info-bar">
+  <span>Họ và tên / Имя: <strong>__________________________</strong></span>
+  <span>Ngày / Дата: <strong>_____________</strong></span>
+  <span>Điểm / Оценка: <strong>_______ / 100</strong></span>
+</div>
+
+<div class="container">
+
+  <div class="tip-box">
+    <b>Lưu ý:</b> Bài thi gồm 6 phần. Đọc kỹ yêu cầu từng phần trước khi làm. Câu trả lời tự luận không có duy nhất một đáp án – giáo viên sẽ đánh giá dựa trên ngữ pháp và từ vựng phù hợp.
+  </div>
+
+  <!-- ══════════════════════════════════════
+       PHẦN 1 – NÓI
+  ══════════════════════════════════════ -->
+  <div class="part">
+    <div class="part-title">Часть 1. Говорение — Phần 1: Nói (20 điểm)</div>
+    <div class="part-sub">Trả lời các câu hỏi bằng câu hoàn chỉnh. Sau đó viết và trình bày một đoạn tự giới thiệu.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">1.1. Câu hỏi cá nhân và công việc tại chợ</div>
+    <ol class="qs">
+      <li>Как Вас зовут? <span class="vi">(Bạn tên gì?)</span></li>
+      <li>Откуда Вы? <span class="vi">(Bạn đến từ đâu?)</span></li>
+      <li>Сколько Вам лет? <span class="vi">(Bạn bao nhiêu tuổi?)</span></li>
+      <li>Где Вы работаете? <span class="vi">(Bạn làm việc ở đâu?)</span></li>
+      <li>Что Вы продаёте? <span class="vi">(Bạn bán gì?)</span></li>
+      <li>Вы живёте в квартире или в доме? <span class="vi">(Bạn sống trong căn hộ hay nhà?)</span></li>
+      <li>С кем Вы живёте? <span class="vi">(Bạn sống cùng ai?)</span></li>
+      <li>Сколько часов Вы работаете в день? <span class="vi">(Bạn làm việc mấy tiếng mỗi ngày?)</span></li>
+      <li>Как Ваши дела? <span class="vi">(Bạn có khỏe không? — делать → дело → дела)</span></li>
+      <li>Вы говорите по-русски? <span class="vi">(Bạn có nói tiếng Nga không?)</span></li>
+      <li>Вы учите русский язык? <span class="vi">(Bạn có học tiếng Nga không?)</span></li>
+      <li>Какая сегодня погода? <span class="vi">(Hôm nay thời tiết thế nào?)</span></li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <div class="section-title">1.2. Tự giới thiệu – Расскажите о себе</div>
+    <p>Hãy viết một đoạn văn ngắn (5–7 câu) giới thiệu bản thân: tên, quê quán, công việc, nơi ở, kế hoạch học tiếng Nga.</p>
+    <p style="margin-top:10px; color:#555; font-size:.9em;">Напишите небольшой рассказ о себе (5–7 предложений), затем прочитайте вслух.</p>
+    <div style="margin-top:12px;">
+      <div style="border:1px solid #bbb; border-radius:6px; min-height: 120px; padding:10px; background:#fff;">
+        &nbsp;
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       PHẦN 2 – TỪ VỰNG
+  ══════════════════════════════════════ -->
+  <div class="part" style="margin-top:40px;">
+    <div class="part-title">Часть 2. Словарный запас — Phần 2: Từ vựng (15 điểm)</div>
+    <div class="part-sub">Quần áo, màu sắc, kích cỡ, từ vựng tại chợ.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">2.1. Nối từ với nghĩa đúng (Соедините слово с переводом)</div>
+    <table>
+      <thead>
+        <tr><th>#</th><th>Tiếng Nga</th><th>Chọn đáp án</th><th>Tiếng Việt</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>куртка</td><td><span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td rowspan="8" style="vertical-align:top; padding-top:8px;">
+          a. váy ngắn (skirt)<br>
+          b. quần dài<br>
+          c. áo khoác / jacket<br>
+          d. áo phông<br>
+          e. măng tô (áo dạ dài)<br>
+          f. áo len / sweater<br>
+          g. đầm liền thân<br>
+          h. áo sơ mi
+        </td></tr>
+        <tr><td>2</td><td>платье</td><td><span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+        <tr><td>3</td><td>брюки</td><td><span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+        <tr><td>4</td><td>футболка</td><td><span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+        <tr><td>5</td><td>пальто</td><td><span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+        <tr><td>6</td><td>свитер</td><td><span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+        <tr><td>7</td><td>юбка</td><td><span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+        <tr><td>8</td><td>рубашка</td><td><span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="section-title">2.2. Màu sắc – Цвета</div>
+    <p style="margin-bottom:10px;">Điền tiếng Nga hoặc tiếng Việt còn thiếu:</p>
+    <table>
+      <thead><tr><th>Tiếng Việt</th><th>Tiếng Nga</th></tr></thead>
+      <tbody>
+        <tr><td>đỏ</td><td><span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+        <tr><td><span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>синий</td></tr>
+        <tr><td><span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>зелёный</td></tr>
+        <tr><td>trắng</td><td><span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+        <tr><td><span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>чёрный</td></tr>
+        <tr><td>vàng</td><td><span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+        <tr><td><span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>серый</td></tr>
+        <tr><td>hồng / hồng đậm</td><td><span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="section-title">2.3. Từ vựng tại chợ – Рыночная лексика</div>
+    <p style="margin-bottom:10px;">Dịch sang tiếng Việt:</p>
+    <ol class="qs">
+      <li>прилавок = <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+      <li>покупатель = <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+      <li>продавец = <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+      <li>скидка = <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+      <li>размер = <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+      <li>примерочная = <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+      <li>касса = <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+      <li>товар = <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+    </ol>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       PHẦN 3 – SỐ VÀ GIÁ
+  ══════════════════════════════════════ -->
+  <div class="part" style="margin-top:40px;">
+    <div class="part-title">Часть 3. Числа и цены — Phần 3: Số và giá cả (10 điểm)</div>
+    <div class="part-sub">Kỹ năng đọc và viết số rất quan trọng khi bán hàng ở chợ.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">3.1. Chọn cách viết đúng (Выберите правильный вариант)</div>
+
+    <p style="margin-bottom:8px;"><b>Câu 1.</b> Как правильно написать число <b>4321</b> по-русски?</p>
+    <ul class="choices">
+      <li>A. Четыре тысячи триста двадцать один</li>
+      <li>B. Четыре тысячи триста двадцать первая</li>
+      <li>C. Четыре триста двадцать один</li>
+      <li>D. Четырёхтысячный триста двадцать один</li>
+    </ul>
+    <p style="margin: 10px 0 4px;">Đáp án: <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+
+    <p style="margin-top:16px; margin-bottom:8px;"><b>Câu 2.</b> Как правильно написать число <b>789</b> по-русски?</p>
+    <ul class="choices">
+      <li>A. Семьсот восемьдесят девять</li>
+      <li>B. Семьдесят восемьсот девять</li>
+      <li>C. Семь восемь девять</li>
+      <li>D. Семьсот восемьдесят девятого</li>
+    </ul>
+    <p style="margin: 10px 0 4px;">Đáp án: <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">3.2. Viết số bằng chữ (Напишите число словами)</div>
+    <ol class="qs">
+      <li>150 рублей = <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+      <li>500 рублей = <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+      <li>1 000 рублей = <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+      <li>2 500 рублей = <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+      <li>3 800 рублей = <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <div class="section-title">3.3. Hỏi giờ & trả lời (Который час?)</div>
+    <ol class="qs">
+      <li>
+        &ldquo;Bây giờ là mấy giờ rồi?&rdquo; — Dịch sang tiếng Nga:<br>
+        <span class="fill" style="min-width:300px;">&nbsp;</span>
+      </li>
+      <li>
+        &ldquo;Bây giờ <span class="fill" style="min-width:140px;">&nbsp;</span>&rdquo; — Trả lời theo thời điểm hiện tại (viết giờ bằng chữ):<br>
+        <span class="fill" style="min-width:300px;">&nbsp;</span>
+      </li>
+    </ol>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       PHẦN 4 – NGỮ PHÁP
+  ══════════════════════════════════════ -->
+  <div class="part" style="margin-top:40px;">
+    <div class="part-title">Часть 4. Грамматика — Phần 4: Ngữ pháp (25 điểm)</div>
+    <div class="part-sub">Cách (падеж), thể động từ (виды глагола), động từ chuyển động (глаголы движения).</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">4.1. Điền dạng đúng của danh từ – Падежи (Cách)</div>
+    <p style="font-size:.9em; color:#555; margin-bottom:10px;">Điền dạng biến cách phù hợp của danh từ trong ngoặc.</p>
+    <ol class="qs">
+      <li>Я продаю <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> (куртка).</li>
+      <li>Покупатель смотрит на <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> (платье).</li>
+      <li>У меня нет <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> (этот размер).</li>
+      <li>Покупатель доволен <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> (покупка).</li>
+      <li>Я дам скидку <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> (клиент).</li>
+      <li>Мы говорим о <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> (цена).</li>
+      <li>Помоги <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> (женщина).</li>
+      <li>Я вижу <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> (машина).</li>
+      <li>Он идёт с <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> (друг).</li>
+      <li>У меня нет <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> (книга).</li>
+      <li>Мои родители <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> (жить) в большом доме, и у них <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> (есть/нет) красивый сад с цветами.</li>
+      <li>На уроке мы <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> (повторять) грамматику, но мне <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> (быть) сложно понять все правила.</li>
+      <li>Она не <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> (мочь) прийти на встречу, потому что сегодня у неё <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> (много/мало) работы.</li>
+      <li>У меня <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> (есть/нет) две кошки, и они всегда <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> (играть) с детьми, когда приходят гости.</li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <div class="section-title">4.2. Thể động từ – Виды глагола (НСВ / СВ)</div>
+    <p style="font-size:.9em; color:#555; margin-bottom:10px;">Chọn dạng đúng trong ngoặc (НСВ = thể chưa hoàn thành, СВ = thể hoàn thành).</p>
+    <ol class="qs">
+      <li>Вчера мы долго <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> (говорить / поговорить) с друзьями о планах на выходные, и в конце концов <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> (решать / решить) пойти в парк.</li>
+      <li>Мы уже <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> (смотреть / посмотреть) этот фильм, поэтому давай выберем другой.</li>
+      <li>Каждое утро он <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> (читать / прочитать) газету и <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> (пить / выпить) кофе перед работой.</li>
+      <li>Мы <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> (строить / построить) дом уже три года.</li>
+      <li>Когда ты <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> (приходить / прийти) домой, позвони мне.</li>
+      <li>Вчера вечером она позвонила мне, когда я уже <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> (приходить / прийти) домой.</li>
+    </ol>
+
+    <p style="margin-top:14px; margin-bottom:8px;"><b>Câu 5 (trắc nghiệm).</b> Когда ты _______ домой, позвони мне.</p>
+    <ul class="choices">
+      <li>A. будешь приходить</li>
+      <li>B. придёшь</li>
+      <li>C. приходишь</li>
+      <li>D. пришёл</li>
+    </ul>
+    <p style="margin: 8px 0 4px;">Đáp án: <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+
+    <p style="margin-top:14px; margin-bottom:8px;"><b>Câu 6 (trắc nghiệm).</b> Вчера вечером она позвонила мне, когда я уже _______ домой.</p>
+    <ul class="choices">
+      <li>A. приходил</li>
+      <li>B. пришёл</li>
+      <li>C. приду</li>
+      <li>D. прихожу</li>
+    </ul>
+    <p style="margin: 8px 0 4px;">Đáp án: <span class="fill">&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">4.3. Động từ chuyển động – Глаголы движения</div>
+    <p style="font-size:.9em; color:#555; margin-bottom:10px;">Điền động từ và giới từ phù hợp.</p>
+    <ol class="qs">
+      <li>Я ____ (идти / пойти) ____ (в / на) рынок. <span class="vi">(Tôi đi đến chợ.)</span></li>
+      <li>Мы часто ____ (ходить / сходить) ____ (из / от) дома до рынка. <span class="vi">(Chúng tôi thường đi bộ từ nhà đến chợ.)</span></li>
+      <li>Он ____ (ехать / поехать) ____ (в / на) Москву на поезде. <span class="vi">(Anh ấy đi tàu lên Moscow.)</span></li>
+      <li>Она каждый день ____ (ходить / пойти) ____ (к / до) врачу. <span class="vi">(Mỗi ngày cô ấy đến gặp bác sĩ.)</span></li>
+      <li>Дети ____ (бежать / побежать) ____ (с / из) школы домой. <span class="vi">(Trẻ em chạy từ trường về nhà.)</span></li>
+      <li>Вы ____ (ездить / съездить) ____ (на / в) море летом? <span class="vi">(Bạn có đi biển vào mùa hè không?)</span></li>
+      <li>Мы ____ (идти / пойти) ____ (от / из) работы до магазина. <span class="vi">(Chúng tôi đi từ chỗ làm đến cửa hàng.)</span></li>
+      <li>Он уже ____ (приходить / прийти) ____ (к / до) нам домой? <span class="vi">(Anh ấy đã đến nhà chúng tôi chưa?)</span></li>
+      <li>Я ____ (ездить / съездить) ____ (по / на) городу на автобусе. <span class="vi">(Tôi đi xe buýt vòng quanh thành phố.)</span></li>
+      <li>Они ____ (ходить / пойти) ____ (на / в) концерт вчера вечером. <span class="vi">(Họ đã đi xem hòa nhạc tối qua.)</span></li>
+    </ol>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       PHẦN 5 – HỘI THOẠI TẠI CHỢ
+  ══════════════════════════════════════ -->
+  <div class="part" style="margin-top:40px;">
+    <div class="part-title">Часть 5. Диалог на рынке — Phần 5: Hội thoại tại chợ (15 điểm)</div>
+    <div class="part-sub">Đọc đoạn hội thoại, trả lời câu hỏi, sau đó tự viết hội thoại của mình.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">5.1. Đọc và trả lời câu hỏi</div>
+    <div class="dialogue">
+      <p><span class="role2">Покупатель:</span> Здравствуйте! Сколько стоит эта куртка?</p>
+      <p><span class="role">Продавец:</span> Добрый день! Эта куртка стоит три тысячи рублей.</p>
+      <p><span class="role2">Покупатель:</span> Дорого. А можно дешевле?</p>
+      <p><span class="role">Продавец:</span> Хорошо, для вас — две тысячи восемьсот. Это хорошая цена!</p>
+      <p><span class="role2">Покупатель:</span> Какой размер есть?</p>
+      <p><span class="role">Продавец:</span> Есть сорок второй, сорок четвёртый, сорок шестой и сорок восьмой.</p>
+      <p><span class="role2">Покупатель:</span> Покажите, пожалуйста, сорок четвёртый размер.</p>
+      <p><span class="role">Продавец:</span> Вот, пожалуйста. Примерочная — вон там, слева.</p>
+      <p><span class="role2">Покупатель:</span> Спасибо! Беру!</p>
+      <p><span class="role">Продавец:</span> Пожалуйста! Добро пожаловать ещё!</p>
+    </div>
+
+    <ol class="qs" style="margin-top:12px;">
+      <li>Сколько стоит куртка изначально? <span class="vi">(Giá ban đầu của áo khoác là bao nhiêu?)</span><br>
+        <span class="fill" style="min-width:300px;">&nbsp;</span>
+      </li>
+      <li>Какую скидку дал продавец? <span class="vi">(Người bán đã giảm giá bao nhiêu?)</span><br>
+        <span class="fill" style="min-width:300px;">&nbsp;</span>
+      </li>
+      <li>Какой размер взял покупатель? <span class="vi">(Khách lấy size nào?)</span><br>
+        <span class="fill" style="min-width:300px;">&nbsp;</span>
+      </li>
+      <li>Где находится примерочная? <span class="vi">(Phòng thử đồ ở đâu?)</span><br>
+        <span class="fill" style="min-width:300px;">&nbsp;</span>
+      </li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <div class="section-title">5.2. Tự viết hội thoại (Составьте свой диалог)</div>
+    <p>Viết hội thoại giữa người bán (продавец) và khách hàng (покупатель) về việc mua một bộ quần áo. Ít nhất <b>6 lượt thoại</b>. Có thể bao gồm: hỏi giá, mặc cả, hỏi size, màu sắc, trả tiền.</p>
+    <div style="margin-top:12px; border:1px solid #bbb; border-radius:6px; min-height:180px; padding:12px; background:#fff;">
+      &nbsp;
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       PHẦN 6 – DỊCH THUẬT
+  ══════════════════════════════════════ -->
+  <div class="part" style="margin-top:40px;">
+    <div class="part-title">Часть 6. Перевод — Phần 6: Dịch thuật (15 điểm)</div>
+    <div class="part-sub">Dịch các câu thường dùng khi bán hàng tại chợ.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">6.1. Dịch sang tiếng Nga (Переведите на русский язык)</div>
+    <ol class="qs">
+      <li>Cái này bao nhiêu tiền? = <span class="fill" style="min-width:260px;">&nbsp;</span></li>
+      <li>Có size lớn hơn không? = <span class="fill" style="min-width:260px;">&nbsp;</span></li>
+      <li>Tôi có thể thử không? = <span class="fill" style="min-width:260px;">&nbsp;</span></li>
+      <li>Đây là hàng tốt, chất lượng cao. = <span class="fill" style="min-width:260px;">&nbsp;</span></li>
+      <li>Tôi sẽ giảm giá cho bạn. = <span class="fill" style="min-width:260px;">&nbsp;</span></li>
+      <li>Màu đỏ hay màu xanh? = <span class="fill" style="min-width:260px;">&nbsp;</span></li>
+      <li>Cảm ơn, hẹn gặp lại! = <span class="fill" style="min-width:260px;">&nbsp;</span></li>
+      <li>Bạn mặc size mấy? = <span class="fill" style="min-width:260px;">&nbsp;</span></li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <div class="section-title">6.2. Dịch sang tiếng Việt (Переведите на вьетнамский язык)</div>
+    <ol class="qs">
+      <li>Сколько стоит? = <span class="fill" style="min-width:260px;">&nbsp;</span></li>
+      <li>Есть ли больший размер? = <span class="fill" style="min-width:260px;">&nbsp;</span></li>
+      <li>Можно примерить? = <span class="fill" style="min-width:260px;">&nbsp;</span></li>
+      <li>Это хорошее качество. = <span class="fill" style="min-width:260px;">&nbsp;</span></li>
+      <li>Я дам вам скидку. = <span class="fill" style="min-width:260px;">&nbsp;</span></li>
+      <li>Приходите ещё! = <span class="fill" style="min-width:260px;">&nbsp;</span></li>
+      <li>У нас есть все размеры. = <span class="fill" style="min-width:260px;">&nbsp;</span></li>
+    </ol>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       ĐÁP ÁN
+  ══════════════════════════════════════ -->
+  <div class="answer-key">
+    <h2>ĐÁP ÁN — КЛЮЧ К ОТВЕТАМ (Dành cho giáo viên)</h2>
+
+    <p><strong>Phần 2.1 – Nối từ:</strong> 1-c, 2-g, 3-b, 4-d, 5-e, 6-f, 7-a, 8-h</p>
+    <p><strong>Phần 2.2 – Màu sắc:</strong> đỏ=красный, синий=xanh dương, зелёный=xanh lá, trắng=белый, чёрный=đen, vàng=жёлтый, серый=xám, hồng=розовый</p>
+    <p><strong>Phần 2.3 – Từ vựng chợ:</strong> прилавок=quầy hàng, покупатель=khách hàng, продавец=người bán, скидка=giảm giá, размер=kích cỡ/size, примерочная=phòng thử đồ, касса=quầy thu tiền, товар=hàng hóa</p>
+
+    <p><strong>Phần 3.1:</strong> Câu 1 → A; Câu 2 → A</p>
+    <p><strong>Phần 3.2:</strong>
+      150 = сто пятьдесят рублей &nbsp;|&nbsp;
+      500 = пятьсот рублей &nbsp;|&nbsp;
+      1000 = одна тысяча рублей &nbsp;|&nbsp;
+      2500 = две тысячи пятьсот рублей &nbsp;|&nbsp;
+      3800 = три тысячи восемьсот рублей
+    </p>
+    <p><strong>Phần 3.3:</strong> "Который сейчас час?" / "Сколько сейчас времени?" — Trả lời theo giờ thực tế.</p>
+
+    <p><strong>Phần 4.1 – Падежи (gợi ý):</strong>
+      куртку (В.п.) | платье (В.п.) | этого размера (Р.п.) | покупкой (Т.п.) | клиенту (Д.п.) | цене (П.п.) | женщине (Д.п.) | машину (В.п.) | с другом (Т.п.) | книги (Р.п.)
+    </p>
+    <p><strong>Phần 4.1 (tiếp):</strong> живут, есть | повторяем, было | может, много | есть, играют</p>
+
+    <p><strong>Phần 4.2 – Виды глагола:</strong>
+      говорили / решили | посмотрели | читает / пьёт | строим | придёшь | пришёл<br>
+      Trắc nghiệm câu 5: <b>B (придёшь)</b> &nbsp;|&nbsp; câu 6: <b>B (пришёл)</b>
+    </p>
+
+    <p><strong>Phần 4.3 – Глаголы движения (gợi ý):</strong>
+      иду на | ходим от … до | едет в | ходит к | бегут из | ездите на | идём от … до | пришёл к | езжу по | пошли на
+    </p>
+
+    <p><strong>Phần 5.1:</strong> Giá ban đầu: 3000 руб. | Giảm giá: 200 руб. | Size: 44-й | Phòng thử: слева (bên trái)</p>
+
+    <p><strong>Phần 6.1 – Dịch sang Nga (gợi ý):</strong>
+      Сколько это стоит? | Есть ли размер больше? | Можно примерить? | Это хороший товар, высокое качество. | Я дам вам скидку. | Красный или синий? | Спасибо, до свидания! | Какой у вас размер?
+    </p>
+    <p><strong>Phần 6.2 – Dịch sang Việt (gợi ý):</strong>
+      Giá bao nhiêu? | Có size lớn hơn không? | Có thể thử không? | Chất lượng tốt. | Tôi sẽ giảm giá cho bạn. | Mời bạn quay lại! | Chúng tôi có đầy đủ các size.
+    </p>
+  </div>
+
+  <div class="tip-box" style="margin-top:24px;">
+    <b>Mẹo dành cho người bán hàng tại chợ Moscow:</b><br>
+    Học thuộc lòng các câu: <em>«Сколько стоит?», «Есть размер?», «Можно дешевле?», «Хорошее качество!», «Приходите ещё!»</em>
+    — bạn sẽ xử lý được hầu hết các tình huống mua bán cơ bản.
+  </div>
+
+</div><!-- end container -->
 </body>
 </html>
